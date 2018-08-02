@@ -21,17 +21,16 @@ console.log("String 1:", capitalI(sentence))
 
 var jsHistory = 'JavaScript, not to be confused with Java, was created in 10 days in May 1995 by Brendan Eich, then working at Netscape and now of Mozilla. JavaScript was not always known as JavaScript: the original name was Mocha, a name chosen by Marc Andreessen, founder of Netscape. In September of 1995 the name was changed to LiveScript, then in December of the same year, upon receiving a trademark license from Sun, the name JavaScript was adopted. This was somewhat of a marketing move at the time, with Java being very popular around then.';
 
-
-
 function countA(str) {
 
-    let sentenceCount = str.split("");
+    // let sentenceCount = str.split("")    ========>>>>> IS UNNECESSARY! b/c of the .length method
 
     let totalCount = 0;
 
-    for (let i = 0; i < sentenceCount.length; i++) {
-        const letter = sentenceCount[i];
-        if (letter == "a" || letter == "A") {
+    for (let i = 0; i < str.length; i++) {
+        const letter = str[i];
+        if (letter == "a" || letter == "A") { 
+            // or if (letter.toLowerCase() == 'a')
             totalCount++
         }
     }
@@ -58,18 +57,18 @@ var textScream = 'I scream, you scream, we all scream for icecream';
 
 function changeScream(str) {
 
-    let arrayScream = str.split(" ");
+    let arrayScream = str.split(" ")
 
     for (let i = 0; i < arrayScream.length; i++) {
-        const wordScream = arrayScream[i];
+        const wordScream = arrayScream[i]
         if (wordScream.includes("scream")) {
             arrayScream[i] = wordScream.toUpperCase()
         }
-    };
+    }
 
     return arrayScream.join(" ")
 
-};
+}
 
 
 
